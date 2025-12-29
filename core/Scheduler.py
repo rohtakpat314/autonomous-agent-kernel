@@ -1,23 +1,35 @@
+from core.agent import Agent
+from core.state import State
+from core.action import Action
 
-from runtime.agent import Agent 
-class Scheduler: 
-    def run(self, agent: Agent):
-        #Main loop that conducts the agent steps and handles the lifecycle/safety rails.
+class Scheduler:
+    def __init__(self, max_steps: int = 100):
+        self.max_steps = max_steps
+
+    def run(self, agent: Agent, state: State):
         running = True
-        #for the loop
-        while running:
-            try:
-                #not really sure how we would get the current state of the agent 
-                #we know that these finite state machines work as 'stepping' from one state to another, so i put it as a step function
-                status = agent.step()
-                
+        steps = 0
 
-                # Check for exit signals (STOP) or internal completion flags.
-                if status.get("state") == "STOP" or status.get("done"):
-                    #if the task is done then we can stop the loop
+        while running and steps < self.max_steps:
+            try:
+                action: Action = agent.step(state)
+                self.apply_action(state, action)
+
+                if action.type == "STOP":
                     running = False
-                
+
+                steps += 1
+                state.step_count += 1
+
             except Exception as error:
-                #Catching at the scheduler level prevents state corruption and allows for a clean exit/save
-                #trigger a save here.
-                is_running = False
+                print(f"Error in agent step: {error}")
+                running = False
+
+    def apply_action(self, state: State, action: Action):
+        if action.type == "SET":
+            key, value = action.payload
+            state.set(key, value)
+        elif action.type in ("NOOP", "STOP"):
+            pass
+        else:
+            raise ValueError(f"Unknown action type: {action.type}")

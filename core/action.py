@@ -19,4 +19,4 @@ from typing import Dict, Any
 @dataclass(frozen = True)   # frozen prevents mutation after a decision
 class Action: 
     type: str               # "wait" 
-    payload: Dict[str,Any]             
+    payload: Dict[str,Any] = None  
