@@ -52,4 +52,5 @@ with Markov Chains and Finite State Machines (FSMs).
 
 
 *Founded by: Rohtak Patwardhan*
+
 *Developed by Rohtak Patwardhan, Vikramaditya Rajput, and Akshit Jalli*   
