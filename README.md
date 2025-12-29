@@ -59,11 +59,5 @@ Week 1 focused on laying the foundation: defining the core classes, making a sim
 
 ---
 
-<<<<<<< HEAD
 **Founded by:** [Rohtak Patwardhan](https://github.com/rohtakpat314)  
 **Developed by:** Rohtak Patwardhan, Vikramaditya Rajput, and Akshit Jalli
-=======
-*Founded by: Rohtak Patwardhan*
-
-*Developed by Rohtak Patwardhan, Vikramaditya Rajput, and Akshit Jalli*   
->>>>>>> f512010b1a580f229386bdf1718244c920897d07
