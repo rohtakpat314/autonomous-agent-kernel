@@ -1,6 +1,5 @@
 # Optrace - Agent AI Runtime 
 
-[![License](https://img.shields.io/badge/license-MIT-green)](#)
 [![Python Version](https://img.shields.io/badge/python-3.11-blue)](#)
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](#)
 
