@@ -13,7 +13,7 @@ The runtime schedules agents, manages their state, handles specific tool feature
 
 However, what does this actually prove?  
 
-It proves that employers and big-tech companies could implement an internal layer specialized for AI.  
+One could implement an internal layer specialized for AI.  
 This would lead to less resource consumption and help with communication between AIs.  
 Essentially, results from one AI could feed into another (I/O) in an [n8n](https://n8n.io/) daisychain format.  
 Additionally, it would allow auditable actions and replay functionality to ensure that the AI agents are running responsibly and that their actions are being logged.  
