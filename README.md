@@ -7,6 +7,7 @@ This project aims to build a lightweight, compact AI Agent Runtime for proof of 
 The goal is to make it similar to an operating system, but for AI agents.  
 The runtime schedules agents, manages their state, handles specific tool features, and provides an interface for handling AI tools.  
 
+**NOTE: A lot of the code is empty skeleton files**
 
 ## Folder Structure
 
